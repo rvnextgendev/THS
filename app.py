@@ -118,8 +118,8 @@ with col2:
     st.markdown("""
     <div class="card">
         <div class="card-title">📉 Interest Rate</div>
-        <h3>7% per year</h3>
-        <p class="card-desc">Average yearly bank interest.</p>
+        <h3>9% per year</h3>
+        <p class="card-desc">Revised yearly bank interest used for rewards.</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -127,7 +127,7 @@ with col3:
     st.markdown("""
     <div class="card">
         <div class="card-title">💰 Annual Reward Fund</div>
-        <h3>₹7,000</h3>
+        <h3>₹9,000</h3>
         <p class="card-desc">Interest amount used for student rewards.</p>
     </div>
     """, unsafe_allow_html=True)
@@ -140,7 +140,7 @@ st.markdown('<div class="section-title">🎯 Purpose of the Reward Scheme</div>'
 st.markdown("""
 <div class="content-card">
 To encourage academic excellence, the school created a permanent education fund from which 
-the annual interest (₹7,000) is awarded to the top 3 performers every year.
+the annual interest (₹9,000) is awarded to the top 3 performers every year.
 
 <br>
 
@@ -166,57 +166,62 @@ Let:
 
 • <b>M1, M2, M3</b> = Marks of 1st, 2nd, 3rd rank <br>
 • <b>Total = M1 + M2 + M3</b> <br>
-• <b>Reward Pool = ₹7,000</b>
+• <b>Reward Pool = ₹9,000</b>
 
 <br>
 <b>Formulas:</b><br>
-• First Prize = 7000 × (M1 / Total)<br>
-• Second Prize = 7000 × (M2 / Total)<br>
-• Third Prize = 7000 × (M3 / Total)
+• First Prize = 9000 × (M1 / Total)<br>
+• Second Prize = 9000 × (M2 / Total)<br>
+• Third Prize = 9000 × (M3 / Total)
 
 </div>
 """, unsafe_allow_html=True)
 
 # --------------------------------------------------
-# EXAMPLE SECTION
+# EXAMPLE SECTION (OUT OF 600)
 # --------------------------------------------------
-st.markdown('<div class="section-title">📝 Example (Marks out of 500)</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-title">📝 Example (Marks out of 600)</div>', unsafe_allow_html=True)
 
 st.markdown("""
 <div class="content-card">
 
 <ul>
-<li><b>1st Rank:</b> 489</li>
-<li><b>2nd Rank:</b> 450</li>
-<li><b>3rd Rank:</b> 380</li>
+<li><b>1st Rank:</b> 589</li>
+<li><b>2nd Rank:</b> 550</li>
+<li><b>3rd Rank:</b> 480</li>
 </ul>
 
-<b>Total Marks = 1319</b>
+<b>Total Marks = 1619</b>
 
 </div>
 """, unsafe_allow_html=True)
 
+# Marks and rewards for ₹9,000 fund
 df = pd.DataFrame({
     "Rank": ["🥇 1st", "🥈 2nd", "🥉 3rd"],
-    "Marks": [489, 450, 380],
-    "Final Reward (₹)": [2595, 2388, 2016]
+    "Marks (out of 600)": [589, 550, 480],
+    "Final Reward (₹)": [3274, 3057, 2668]
 })
 
 st.dataframe(df, use_container_width=True, hide_index=True)
 
 st.markdown("""
 <div class="content-card">
-<b>Final Distribution:</b><br><br>
+<b>Final Distribution (₹9,000 Fund):</b><br><br>
 
-🥇 1st Rank → <b>₹2,595</b><br>
-🥈 2nd Rank → <b>₹2,388</b><br>
-🥉 3rd Rank → <b>₹2,016</b><br>
+🥇 1st Rank → <b>₹3,274</b><br>
+🥈 2nd Rank → <b>₹3,057</b><br>
+🥉 3rd Rank → <b>₹2,668</b><br><br>
+
+<span style="font-size:13px; color:#7f8c8d;">
+(Values are rounded to the nearest rupee; a difference of ₹1 may remain due to rounding.)
+</span>
 
 </div>
 """, unsafe_allow_html=True)
 
 # --------------------------------------------------
-# FOOTER  (UPDATED WITH YOUR REQUEST)
+# FOOTER
 # --------------------------------------------------
 st.markdown("""
 <br><br>
